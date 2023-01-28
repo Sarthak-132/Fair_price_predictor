@@ -1,0 +1,391 @@
+/* External css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: rgb(255,0,0);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-color:skyblue;
+}
+
+.header .nav-bar {
+    width: 90%;
+    height: 80px;
+    margin: auto;
+    color: rgb(255,0,0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    margin-bottom: 2px;
+}
+
+.header .nav-bar .logo {
+    margin-left: 50px;
+    margin-bottom: 60px;
+}
+
+.menu {
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.header .nav-bar .logo a {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color:rgb(255,0,0);
+}
+
+.header .nav-bar .menu ul li {
+    margin-right: 40px;
+}
+
+.header .nav-bar .logo a:hover{
+    color: #000000;
+}
+
+.menu ul li a:hover {
+     color: #000000;
+}
+
+.header .nav-bar .menu ul li a {
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: all 0.5s;
+    opacity: 0.7;
+}
+
+.header .nav-bar .menu ul li a:hover {
+    opacity: 1;
+}
+
+.header .nav-bar .menu ul li a.active{
+    opacity: 1;
+}
+
+.header .nav-bar .social-media ul li i{
+    width: 45px;
+    height: 42px;
+    line-height: 44px;
+    margin-right: 5px;
+    border-radius:40px;
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-media{
+    margin-bottom: 61px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    color: #000000;
+    background-color: #000000;
+}
+
+.header .nav-bar .social-media ul li i:hover{
+    background-color: rgb(255,0,0);
+    color:white;
+}
+
+.hero{
+    width: 100%;
+}
+
+.hero .row{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin: auto;
+}
+
+.hero .row .left-sec{
+    width:30%;
+    margin-left: 50px;
+}
+
+.hero .row .left-sec h2{
+    font-size: 65px;
+    text-transform: capitalize;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content h2{
+    text-shadow:5px 5px 7px #000000;
+}
+
+.hero .row .left-sec h2 span{
+    color: #d40;
+}
+
+.hero .row .left-sec p{
+    margin: 5px 0;
+    color:black;
+    line-height: 28px;
+    padding-right: 150px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.hero .row .left-sec .discover-btn{
+    display: flex;
+    align-items: center;
+    outline: none;
+    border-radius: 20px;
+    cursor:pointer;
+    margin-top:75px ;
+    padding: 2px 6px 2px 2px;
+    border: 2px solid #fff;
+    background-color:  rgb(74, 25, 25);
+}
+
+.hero .row .left-sec .discover-btn a{
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-left: 15px;
+    text-transform: capitalize;
+    background-color:  rgb(74, 25, 25);
+}
+
+abbr{
+    text-decoration:none;
+}
+
+.hero .row .left-sec .discover-btn span{
+    color: #000000;
+    font-size:45px ;
+    background-color:  rgb(74, 25, 25);
+}
+
+.hero .information{
+    width:100%;
+    display:flex;
+    margin-top:70px;
+}
+
+.hero .information .production{
+    margin-right: 40px;
+    line-height: 3px;
+}
+
+.hero .information .production h2{
+    font-size:15px;
+    letter-spacing: 1px;
+    color: rgb(74, 25, 25);
+}
+
+.hero .information .production p{
+    padding-right: 0;
+    letter-spacing: 1px;
+    color: rgb(255,0,0);
+    font-weight:bold;
+}
+
+.hero .right-sec{
+    width:62%;
+}
+
+.hero .right-sec img{
+    width: 650px;
+    height: 488px;
+    margin: auto;
+    float: right;
+    color:#000000;
+}
+
+#car1{
+    height: 90%;
+    width: 85%;
+    margin-right: 35px;
+    padding-top: 75px;
+}
+
+#car2{
+    height:70%;
+    width: 85%;
+    margin-right: 34px;
+    padding-top: 50px;
+}
+
+#car3{
+    height:80%;
+    width: 90%;
+    margin-right: 37px;
+    padding-top: 105px;
+}
+
+#car4{
+    height: 60%;
+    width: 84%;
+    margin-right: 50px;
+    padding-top: 69px;
+}
+
+#car5{
+    height: 80%;
+    width: 84%;
+    margin-right: 40px;
+    padding-top: 100px;
+}
+
+#car6{
+    height: 90%;
+    width: 84%;
+    margin-right: 35px;
+    padding-top: 74px;
+}
+
+.slick-dots li button{
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+    margin-top:70px;
+}
+
+.slick-next, .slick-prev{
+    top: 95% !important;
+    z-index: 999;
+}
+
+.slick-prev{
+    position: absolute;
+    left: 200px !important;
+}
+
+.slick-next{
+    position: absolute;
+    right: 200px !important;
+}
+
+.slick-next:before .slick-prev:after{
+    font-size: 40px !important;
+}
+
+
+.slick-dots{
+    padding-left: 5px !important;
+    margin-bottom: 40px !important;
+}
+
+.slick-dots li{
+    margin-right: 15px !important;
+}
+
+.slick-dots li.slick-active:after{
+    position:absolute;
+    content:'';
+    bottom:15px;
+    left:1px;
+    opacity:1;
+    color:red;
+    font-size:36px;
+    margin-bottom:50px;
+}
+
+
+
+
+.container{
+    height:100vh;
+    width:100%;
+    background-color:orangered ;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.container .row{
+    background-color:#000000 transparent;
+    color: #ffffff;
+    width:60%;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    padding-top: 20px;
+}
+
+.card{
+    width:100%;
+    height:75%;
+    align-items: center;
+    background-color: #000000;
+    margin-top: 76px;
+    opacity:1;
+    padding-left:90px;
+}
+
+.card .card-header .title hr{
+    color: #fff;
+    background-color:#fff;
+}
+
+.card-header .title h1{
+    color: orangered;
+    padding-top: 12px;
+    padding-bottom: 6px;
+}
+
+.card-body{
+    padding-top: 15px;
+    align-items: center;
+}
+
+.form-group{
+    padding-top: 20px;
+}
+
+.select_company{
+    width: 90%;
+    padding-top: 1px;
+}
+
+.predict{
+    width: 90%;
+    padding: 6px;
+    margin-top: 15px;
+    background-color: orangered;
+    font-weight: bold;
+    font-size: 20px;
+}
+

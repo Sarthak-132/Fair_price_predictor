@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name=" description">
+    <meta content="" name="keywords">
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>car price predictor</title>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        type="text/css">
+</head>
+
+<body>
+    <section class="header" id="heading">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="#" >HOME</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#" class="active">PREDICTION</a></li>
+                    <li><a href="#">HELP</a></li>
+                    <li><a href="#">REVIEW</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+             <div class="social-media">
+                <ul>
+                    <li><a href="https://www.facebook.com/QuikrFans/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/quikr_official/"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/Quikr"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="hero">
+            <div class="row">
+                <div class="left-sec">
+                    <div class="content">
+                        <h2><span> FAIR<br>PRICE</span></h2>
+                        <p>Visit our website, you will get a worth price of second-hand car according to their
+                            condition.</p>
+                    </div>
+                    <button class="discover-btn">
+                        <a href="https://www.quikr.com/"><abbr title="Discover about the car"> Discover </abbr> </a><span> </span>
+                    </button>
+                    <div class="information">
+                        <div class="production" id="site">
+                            <p>Site Created On</p>
+                            <h2>30 june 2022</h2>
+                        </div>
+                        <div class="production" id = "support">
+                            <p>Supported by</p>
+                            <h2>IT dep.(JEC)</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-sec">
+                    <div class="my-car">
+                        <div><img id ="car1" src="../image/car1.png" alt="car1"></div>
+                        <div><img id ="car2" src="../image/car2.png" alt="car2"></div>
+                        <div><img id ="car3" src="../image/car3.png" alt="car3"></div>
+                        <div><img id ="car4" src="../image/car4.png" alt="car4"></div>
+                        <div><img id ="car5" src="../image/car5.png" alt="car5"></div>
+                        <div><img id ="car6" src="../image/car6.png" alt="car6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+     <div class="container">
+        <div class="row">
+            <div class="card">
+
+                <div class="card-header">
+                    <div class="title">
+                        <h1> Prediction </h1>
+                        <hr>
+                    </div>
+
+                </div>
+
+                <div class="card-body">
+                    <form method="post" accept-charset="utf-8">
+                        <div class="form-group">
+                            <label for="company">Select company:</label>
+                            <select class="select_company" name="company" id="company" required onchange="load_car_models(this.id,'car_model')">
+                            <!--  jinja2   -->
+                            {% for company in companies %}
+
+                                <option value="{{ company }}">{{ company }}</option>
+
+                            {% endfor %}
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="car_model">Select Model:</label>
+                            <select class="select_company" name="car_model" id="car_model" required>
+
+                                {% for model in car_models %}
+
+                                <option value="{{ model }}">{{ model }}</option>
+
+                            {% endfor %}
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="year">Select Year of Purchase:</label>
+                            <select class="select_company" name="year" id="year" required>
+
+                                {% for year in years %}
+
+                                <option value="{{ year }}">{{ year }}</option>
+
+                            {% endfor %}
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Fuel">Select Fuel Type:</label>
+                            <select class="select_company" name="Fuel" id="Fuel" required>
+
+                                {% for fuel_type in fuel_types %}
+
+                                <option value="{{ fuel_type }}">{{ fuel_type }}</option>
+
+                            {% endfor %}
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="kms">Enter Number of Kilometers Travelled:</label>
+                            <input class="select_company" type="number"  name="kms" id="kms" placeholder="Enter no. of kilometers travelled">
+                        </div>
+
+                        <div class="form-group">
+                           <button class="predict" onclick="send_data()">Predict Price</button>
+                        </div>
+
+                    </form>
+                    <br>
+
+                    <div class ="raw">
+                        <div class="raw"  style = "text-align : center">
+                            <h1> <span id="prediction"> </span></h1>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".my-car").slick({
+                autoplay:true,
+                dots:true,
+                speed:1000,
+                customPaging :function(slider, i){
+                var thumb = $ (slider.$slides[i]).data();
+                return'<a>'+(i+1)+'</a>';
+                },
+            })
+        });
+    </script>
+
+    <script>
+
+        function load_car_models(company_id , car_model_id)
+        {
+            var company = document.getElementById(company_id);
+            var car_model = document.getElementById(car_model_id);
+
+            car_model.value = "";
+            car_model.innerHtml= "";
+
+            {% for company in companies %}
+
+            if(company.value == "{{company}}")
+            {
+                {% for model in car_models %}
+
+                    {% if company in model %}
+
+                        var newOption = document.createElementById("option");
+
+                        newOption.value = "{{ model }}";
+
+                        newOption.innerHTML = "{{ model }}";
+
+                        car_model.options.add(newOption);
+
+                    {% endif %}
+
+                {% endfor %}
+
+            }
+
+            {% endfor %}
+
+        }
+
+
+
+         function form_handler(event)
+        {
+            event.preventDefault();
+        }
+
+        function send_data()
+        {
+        document.querySelector('form').addEventListener('submit', form_handler);
+
+        var fd = new FormData(document.querySelector('form'));
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.open('POST', '/predict', true);
+
+        document.getElementById("prediction").innerHTML="wait! Predicting Price...";
+
+        xhr.onreadystatechange = function()
+        {
+            if (xhr.readyState == XMLHttpRequest.DONE)
+            {
+                document.getElementById("prediction").innerHTML = "Prediction: ₹"+ xhr.responseText;
+            }
+        }
+
+            xhr.onload=function(){};
+            xhr.send(fd);
+        }
+    </script>
+
+</body>
+</html>
