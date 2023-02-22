@@ -13,6 +13,12 @@
      python language and trained it to predict right amount of the cars on their given properties 
      
 # Merging : 
-  After all the things are done backend connected to front data add app.py with backend and the machine cleaned data of 
-  car and run the code afterward fill all the given properties of car it gives fair price of the car.
+  After all the things are done backend connected to front data add app.py with backend and the machine cleaned data of car and 
+  run the code.
+
+# Deploy : 
+  Our project ready for the testing and deploy after fill up all the properties it gives the fair price of the car and then deploy 
+  the project 
+  
+If you want to contribute in my project you can it will be great for me .
  
